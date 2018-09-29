@@ -1,6 +1,6 @@
 
 /**
- * Implementação de exemplo que utiliza JOptionPane para construir um menu de opções.
+ * Implementação de de operações com Matriz nxm manipulada através um menu de opções.
  */
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -20,21 +20,20 @@ public class Principal {
      * @param M Matriz com os dados a serem copiados.
      * @param linhas Quantidade de linhas da matriz.
      * @param colunas Quantidade colunas da matriz.
-     * @return Uma matriz com uma cópia dos dados da matriz A.
+     * @return Uma matriz com uma cópia dos dados da matriz de M para C.
      */
     public static double[][] criarCopia(double[][] M, int linhas, int colunas) {
-        double[][] Copia = new double[linhas][colunas];
+        double[][] C = new double[linhas][colunas];
         for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < colunas; j++) {
-                Copia[i][j] = M[i][j];
+                C[i][j] = M[i][j];
             }
-
         }
-        return Copia;
+        return C;
     }
 
     /**
-     * Gera uma string formatada com os dados Matriz A.
+     * Gera uma string formatada com os dados Matriz M.
      *
      * @param M Matriz com os dados a serem exibidos.
      * @param linhas Quantidade de linhas da matriz.
@@ -302,11 +301,11 @@ public class Principal {
                     // soma coluna i
                     somaColuna = somaColuna + M[j][i];
                 }
-                if (somaLinha != soma || somaColuna != soma) {
+                if ((somaLinha != soma) || (somaColuna != soma)) {
                     return false;
                 }
             }
-            if (somaDiagonalPrincipal != soma || somaDiagonalSecundaria != soma) {
+            if ((somaDiagonalPrincipal != soma) || (somaDiagonalSecundaria != soma)) {
                 return false;
             } else {
                 return true;
