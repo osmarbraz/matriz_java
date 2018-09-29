@@ -7,11 +7,11 @@ import javax.swing.JTextArea;
 
 public class Principal {
 
-    //Número de linhas da Matriz
+    //Número de linhas da Matriz.
     static int n = 0;
-    //Número de colunas da Matriz
+    //Número de colunas da Matriz.
     static int m = 0;
-    //Matriz M de n por m
+    //Matriz M de n por m.
     static double[][] A = new double[n][m];
 
     /**
@@ -65,17 +65,17 @@ public class Principal {
      *
      */
     public static void carregarMatrizPadrao3x3() {
-        //Número de linhas da Matriz
+        //Número de linhas da Matriz.
         n = 3;
-        //Número de colunas da Matriz
+        //Número de colunas da Matriz.
         m = 3;
-        //Declaro uma matriz a com valores
+        //Declara uma matriz a com valores.
         double[][] a = {
             {2, -1, 3},
             {5, 2, 1},
             {3, 1, 4}
-        }; //Det 28
-        //Atribui para A
+        }; //Deteterminante 28.
+        //Atribui para A.
         A = a;
         JOptionPane.showMessageDialog(null, "Matriz A(3x3) carregada!");
     }
@@ -157,7 +157,7 @@ public class Principal {
      */
     public static String mostraTrianguloSuperiorPrincipal(double[][] M, int linhas, int colunas) {
         String saida = "";
-        //Somente para Matriz quadrada
+        //Somente para Matriz quadrada.
         if (linhas == colunas) {
             for (int i = 0; i < linhas; i++) {
                 for (int j = 0; j < colunas; j++) {
@@ -207,7 +207,7 @@ public class Principal {
      */
     public static String mostraTrianguloInfeior(double[][] M, int linhas, int colunas) {
         String saida = "";
-        //Somente para Matriz quadrada
+        //Somente para Matriz quadrada.
         if (n == m) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < m; j++) {
@@ -278,7 +278,7 @@ public class Principal {
      * @return Verdadeiro ou falso se a matriz forma um quadrado mágico.
      */
     public static boolean eQuadradoMagico(double[][] M, int linhas, int colunas) {
-        //Quadrado mágico somente para matriz quadrada
+        //Quadrado mágico somente para matriz quadrada.
         if (linhas == colunas) {
             double soma = (linhas * linhas * linhas + linhas) / 2;
             double somaLinha = 0;
@@ -286,7 +286,7 @@ public class Principal {
             double somaDiagonalPrincipal = 0;
             double somaDiagonalSecundaria = 0;
 
-            //Percorre as linhas
+            //Percorre as linhas.
             for (int i = 0; i < linhas; i++) {
                 // diagonal principal i=j
                 somaDiagonalPrincipal = somaDiagonalPrincipal + M[i][i];
