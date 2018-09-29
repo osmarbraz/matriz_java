@@ -455,8 +455,8 @@ public class Principal {
         int opcao = -1;
         while (opcao != 99) {
             //Realiza a leitura da opção
-            opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Menu de Opções - Matriz ###\n"
-                    + " 1- Impressão dos dados\n"
+            opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Menu de Opções - Matriz nxm ###\n"
+                    + " 1- Impressão da Matriz\n"
                     + " 2- Carregamento da Matriz (3x3)\n"
                     + " 3- Leitura de uma Matriz(nxm)\n"
                     + " 4- Mostra a Diagonal Principal\n"

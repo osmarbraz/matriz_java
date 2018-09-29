@@ -1,4 +1,4 @@
-# Operações com Matriz n por m
+# Operações com Matriz de tamanho n por m
 Operações diversas com matrizes bidimensionais de tamanho nxm:<br>
 - Impressão de Matriz<br>
 - Leitura de Matriz<br>
