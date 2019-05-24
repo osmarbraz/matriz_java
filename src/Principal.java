@@ -69,13 +69,15 @@ public class Principal {
         n = 3;
         //Número de colunas da Matriz.
         m = 3;
+        
         //Declara uma matriz a com valores.
         double[][] a = {
             {2, -1, 3},
             {5, 2, 1},
             {3, 1, 4}
         }; //Deteterminante 28.
-        //Atribui para A.
+        
+        //Atribui a matriz "a" para A.
         A = a;
         JOptionPane.showMessageDialog(null, "Matriz A(3x3) carregada!");
     }
