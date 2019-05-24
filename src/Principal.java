@@ -183,11 +183,11 @@ public class Principal {
     public static String mostraTrianguloInferiorPrincipal(double[][] M, int linhas, int colunas) {
         String saida = "";
         //Somente para Matriz quadrada
-        if (n == m) {
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < m; j++) {
+        if (linhas == colunas) {
+            for (int i = 0; i < linhas; i++) {
+                for (int j = 0; j < colunas; j++) {
                     if (i > j) {
-                        saida = saida + "A[" + i + "][" + j + "] = " + String.format("%4.1f", A[i][j]) + " ";
+                        saida = saida + "A[" + i + "][" + j + "] = " + String.format("%4.1f", M[i][j]) + " ";
                     }
                 }
             }
@@ -208,11 +208,11 @@ public class Principal {
     public static String mostraTrianguloInfeior(double[][] M, int linhas, int colunas) {
         String saida = "";
         //Somente para Matriz quadrada.
-        if (n == m) {
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < m; j++) {
+        if (linhas == colunas) {
+            for (int i = 0; i < linhas; i++) {
+                for (int j = 0; j < colunas; j++) {
                     if (i > j) {
-                        saida = saida + "A[" + i + "][" + j + "] = " + String.format("%4.1f", A[i][j]) + " ";
+                        saida = saida + "A[" + i + "][" + j + "] = " + String.format("%4.1f", M[i][j]) + " ";
                     }
                 }
             }
@@ -233,22 +233,22 @@ public class Principal {
     public static String mostraMaiorElemento(double[][] M, int linhas, int colunas) {
         int linhaMaior = 0;
         int colunaMaior = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (A[i][j] > A[linhaMaior][colunaMaior]) {
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                if (M[i][j] > M[linhaMaior][colunaMaior]) {
                     linhaMaior = i;
                     colunaMaior = j;
                 }
             }
         }
-        String saida = "A[" + linhaMaior + "][" + colunaMaior + "] = " + String.format("%4.1f", A[linhaMaior][colunaMaior]);
+        String saida = "A[" + linhaMaior + "][" + colunaMaior + "] = " + String.format("%4.1f", M[linhaMaior][colunaMaior]);
         return saida;
     }
 
     /**
      * Retorna a Matriz Transposta.
      *
-     * Matriz Anxm gera Tmxn.
+     * Matriz Mnxm gera Tmxn.
      *
      * @param M Matriz com os dados a serem gerados a transposta.
      * @param linhas Quantidade de linhas da matriz.
@@ -452,6 +452,8 @@ public class Principal {
 
         //Armazena opção lida
         int opcao = -1;
+        
+        //Laço do menu de opções
         while (opcao != 99) {
             //Realiza a leitura da opção
             opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Menu de Opções - Matriz nxm ###\n"
@@ -585,6 +587,9 @@ public class Principal {
                     JOptionPane.showMessageDialog(null, saida);
                     break;
                 }
+                
+                //Outras opções vão aqui
+                
                 //Opção de saída do programa
                 case 99: {
                     System.out.println("Saindo do programa!");
@@ -595,7 +600,7 @@ public class Principal {
                     System.out.println("Opção inválida!");
                     break;
                 }
-            }//Fim Switch
-        }//Fim While
-    }//Fim Main
+            }//Fim switch
+        }//Fim while
+    }//Fim main
 }
